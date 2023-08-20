@@ -30,8 +30,8 @@ namespace SantanderCodingTest.Services
             _storyDetailsEndpoint = hackerNewsSettings.Value.StoryDetailsEndpoint;
             _maxConcurrentRequests = hackerNewsSettings.Value.MaxConcurrentRequests;
 
-            _histogramCached = new LongHistogram(TimeStamp.Seconds(1), 5);
-            _histogramNonCached = new LongHistogram(TimeStamp.Seconds(1), 5);
+            _histogramCached = new LongHistogram(TimeStamp.Seconds(10), 5);
+            _histogramNonCached = new LongHistogram(TimeStamp.Seconds(10), 5);
         }
 
         // Use SemaphoreSlim instead of standard Lock because:
